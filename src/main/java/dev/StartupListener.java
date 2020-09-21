@@ -222,6 +222,7 @@ public class StartupListener {
             this.reservationCovoituragePassagerRepository.save( reservationsCovoituragePassagers1a);
             this.reservationCovoituragePassagerRepository.save( reservationsCovoituragePassagers1b);
             
+            
             ReservationCovoiturage covoit2 = new ReservationCovoiturage( 
             		LocalDateTime.of( 2020,9,25,12,30), 
             		new Localisation( "31 Rue de la paix, Paris", "Paris", 75000, 48.8534f , 2.3488f), 
@@ -253,6 +254,7 @@ public class StartupListener {
             this.reservationCovoituragePassagerRepository.save( reservationsCovoituragePassagers3a);
             this.reservationCovoituragePassagerRepository.save( reservationsCovoituragePassagers3b);
             
+            
             ReservationCovoiturage covoit4 = new ReservationCovoiturage( 
             		LocalDateTime.of( 2020,9,19,10,30),
             		new Localisation( "Porte d'Italie, Paris", "Paris", 75000, 48.8534f , 2.3488f),
@@ -270,6 +272,7 @@ public class StartupListener {
             		teamColor, covoit4, new StatutReservationCovoiturage( null, StatutReservationCovoiturageEnum.DEMANDEE));
             this.reservationCovoituragePassagerRepository.save( reservationsCovoituragePassagers4a);
             this.reservationCovoituragePassagerRepository.save( reservationsCovoituragePassagers4b);
+            
             
             ReservationCovoiturage covoit5 = new ReservationCovoiturage( 
             		LocalDateTime.of( 2020,9,22,11,30),
@@ -296,8 +299,7 @@ public class StartupListener {
             		"https://s1.cdn.autoevolution.com/images/gallery/FIATMultipla-2416_1.jpg", 
             		null, "Multipla", "Citadines polyvalentes", nbPlaces, new Localisation( "Place de la République, Paris", "Paris", 75000, 48.8534f , 2.3414f), new ArrayList<ReservationEntreprise>(), 
             		new StatutVehicule( null, StatutVehiculeEnum.EN_SERVICE));
-           
-            
+                     
             VehiculeEntreprise vehiculeEntreprise2 = new VehiculeEntreprise( "PRO-000-02", "Mercedes", 
             		"https://i.ytimg.com/vi/HD-vr3x9raU/maxresdefault.jpg", 
             		null, "Cla", "Berlines Taille M", nbPlaces, new Localisation( "Porte d'Italie, Paris", "Paris", 75000, 48.8922f , 2.3988f), new ArrayList<ReservationEntreprise>(), 
@@ -312,9 +314,12 @@ public class StartupListener {
             		"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9fJcx0hzX5S-YVBSBBtZLpy1GMpA8wuYIvw&usqp=CAU", 
             		null, "Batmobile", "Compactes", nbPlaces, new Localisation( "Porte du Paradis, Paris", "Paris", 75000, 48.8536f , 2.4484f), new ArrayList<ReservationEntreprise>(), 
             		new StatutVehicule( null, StatutVehiculeEnum.EN_SERVICE));
+
+            vehiculeEntrepriseRepo.save( vehiculeEntreprise1);
+            vehiculeEntrepriseRepo.save( vehiculeEntreprise2);
+            vehiculeEntrepriseRepo.save( vehiculeEntreprise3);
+            vehiculeEntrepriseRepo.save( vehiculeEntreprise4);
             
-            vehiculeEntrepriseRepo.save(vehiculeEntreprise3);
-            vehiculeEntrepriseRepo.save(vehiculeEntreprise4);
             
             // Création Reservation sans chauffeurs
             StatutReservationEntreprise statut1 = new StatutReservationEntreprise();
@@ -386,8 +391,5 @@ public class StartupListener {
             reservationChauffeur3.setVehiculeEntreprise( vehiculeEntreprise1);
             this.reservationChauffeurRepo.save( reservationChauffeur3);
         }
-
-        }
-        
-       
+	}       
 }
