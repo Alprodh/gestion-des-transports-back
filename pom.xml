@@ -116,10 +116,10 @@
 			</activation>
 			<properties>
 				<jdbc.driver>org.postgresql.Driver</jdbc.driver>
-				<jdbc.url>jdbc:postgresql://ec2-176-34-123-50.eu-west-1.compute.amazonaws.com:5432/de0e3fienuc3vn</jdbc.url>
-				<jdbc.user>avsgpntiulsjin</jdbc.user>
-				<jdbc.pass>68b16f44c0efdfe276e27ce28acde8d49b68bc1cbc0bfd04f7715ea40dca5731</jdbc.pass>
-				<jpa.hibernate.ddl>update</jpa.hibernate.ddl>
+				<jdbc.url>jdbc:postgresql://ec2-54-75-150-32.eu-west-1.compute.amazonaws.com:5432/dck6rkivvev7qm</jdbc.url>
+				<jdbc.user>shhkojdfxdxblx</jdbc.user>
+				<jdbc.pass>3de74b9a4b931a8ecc9f4ff82293bbc4795ee3344fb6c2a07129945591e3f99d</jdbc.pass>
+				<jpa.hibernate.ddl>create-drop</jpa.hibernate.ddl>
 				<jdbc.dialect>org.hibernate.dialect.PostgreSQLDialect</jdbc.dialect>
 				<jdbc.connections.max.active>1</jdbc.connections.max.active>
 			</properties>
